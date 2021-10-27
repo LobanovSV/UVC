@@ -23,7 +23,7 @@ If you wish to use your own genome, look into structure of the `hg19` and `hg38`
 Specify the variable `DirWork` with path to the folder you wish to analyse.
 This folder must contain the `SAMs` sub-folder with
 
-(a) `Pos.mat` file containing two variables: `chr` and `posW`. For example, `chr = 5` and `posW = [145838397, 145838950]` used for TCERG1 QTR calling. `chr` is chromosome and `posW` contains coordinates of the specific region you wish to be analysed.
+(a) `Pos.mat` file containing two variables: `chr` and `posW`. For example, `chr = 5` and `posW = [145838397, 145838950]` used for *TCERG1* QTR calling. `chr` is chromosome and `posW` contains coordinates of the specific region you wish to be analysed.
 
 (b) `ID.mat` file containing the variable `ID` with names of individuals (or samples). For example, `ID = {'HD322-45'; 'HD524-75'; 'SZ62'}`.
 
