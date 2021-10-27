@@ -39,9 +39,6 @@ Please cite the following publication if you use this code:
 Lobanov et. al., bioRxiv 2021.07.16.452643.
 
 
-This software is written by S.V. Lobanov and is openly available at
-https://github.com/LobanovSV/UVC
-
 
 
 
