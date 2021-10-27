@@ -36,7 +36,7 @@ samtools view BAMs/HD322-45.bam 5:145838397-145838950 > SAMs/1.sam
 
 
 Please cite the following publication if you use this code:
-Lobanov et. al., bioRxiv 2021.07.16.452643.
+Lobanov *et. al.*, bioRxiv 2021.07.16.452643.
 
 
 
