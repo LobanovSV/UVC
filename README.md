@@ -12,12 +12,15 @@ Download the software from
 https://github.com/LobanovSV/UVC.git
 
 #### 2. Reference genome
-% The hg19 and hg38 genomes are provided and located in the 'Data'
-% sub-folder. If you wish to use your own genome, look into structure of
-% the hg19 and hg38 genomes and create your own in the same way
 If you use hg19 and hg38 genomes, you can download the required files from
+https://drive.google.com/drive/folders/11Iu7mCbnSSuJc8jnCswQRLQBn01WqDyW?usp=sharing
+If you wish to use your own genome, look into structure of the hg19 and hg38 genomes and create your own in the same way:
+- The folder with software must contain the sub-folder 'RefGenome'.
+- The sub-folder 'RefGenome' must contain the sub-folder with reference genome name (for example, hg19 or hg38).
+- The sub-sub-folder must contain mat files '"chr".mat' ("chr" = 1, 2, etc.) each having only one variable 'FASTA' with nucleotide sequence of the respective chromosome.
+- The nucleotide sequence must contain only CAPITAL letters A, C, G, T, N.
 
-Download reference genome, split it into and convert it to the 
+#### 3. Reference genome
 
 Specify the variable DirWork. This folder must contain 'SAMs' sub-folder with
 (a) 'Pos.mat' file containing two variables: chr and posW. For example,
