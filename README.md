@@ -28,7 +28,7 @@ This folder must contain the `SAMs` sub-folder with
 (b) `ID.mat` file containing the variable `ID` with names of individuals (or samples). For example, `ID = {'HD322-45'; 'HD524-75'; 'SZ62'}`.
 
 (c) Sam files with reads overlaping the region `chr:posW(1)-posW(2)`. Sam files must be named with integer numbers, for example, `1.sam`, `2.sam`, `3.sam`, etc. and correspond to the names of individuals in the variable `ID`. For example, `HD322-45 <---> 1.sam`, `HD524-75 <---> 2.sam`, `SZ62 <---> 3.sam`, etc.
-For example, you can use `samtools` to create such files:
+If you have initially bam files, you can use `samtools` to extract reads from the bam files:
 ```
 samtools view BAMs/HD322-45.bam 5:145838397-145838950 > SAMs/1.sam
 ```
