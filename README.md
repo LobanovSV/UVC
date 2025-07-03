@@ -36,7 +36,9 @@ samtools view BAMs/HD322-45.bam 5:145838397-145838950 > SAMs/1.sam
 
 
 Please cite the following publication if you use this code:
-Lobanov *et al.*, bioRxiv 2021.07.16.452643.
+Lobanov *et al.*, *npj Genomic Medicine* (2022) 7:53.
+https://doi.org/10.1038/s41525-022-00317-w
+
 
 
 
