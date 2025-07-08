@@ -11,8 +11,7 @@ Please be sure that your folder structure satisfy the requirements written below
 Download the software from https://github.com/LobanovSV/UVC.git.
 
 #### 2. Reference genome
-If you use `hg19` and `hg38` genomes, you can download the required files from
-https://drive.google.com/drive/folders/11Iu7mCbnSSuJc8jnCswQRLQBn01WqDyW?usp=sharing.
+`hg19` and `hg38` genomes come with software.
 If you wish to use your own genome, look into structure of the `hg19` and `hg38` genomes and create your own in the same way:
 - The folder with software must contain the sub-folder `RefGenome`.
 - The sub-folder `RefGenome` must contain the sub-sub-folder with reference genome name (for example, `hg19` or `hg38`).
@@ -23,9 +22,18 @@ If you wish to use your own genome, look into structure of the `hg19` and `hg38`
 Specify the variable `DirWork` with path to the folder you wish to analyse.
 This folder must contain the `SAMs` sub-folder with
 
-(a) `Pos.mat` file containing two variables: `chr` and `posW`. For example, `chr = 5` and `posW = [145838397, 145838950]` used for *TCERG1* QTR calling. `chr` is chromosome and `posW` contains coordinates of the specific region you wish to be analysed.
+(a) `Pos.mat` file containing two variables: `chr` and `posW`. For example, `chr = 5` and `posW = [145838397, 145838950]` used for *TCERG1* QTR calling. `chr` is chromosome and `posW` contains coordinates of the specific region you wish to be analysed. You can create this file Matlab using the following commands:
+```
+chr = 5;
+posW = [145838397, 145838950];
+save('Pos.mat', 'chr', 'posW')
+```
 
-(b) `ID.mat` file containing the variable `ID` with names of individuals (or samples). For example, `ID = {'HD322-45'; 'HD524-75'; 'SZ62'}`.
+(b) `ID.mat` file containing the variable `ID` with names of individuals (or samples). For example, `ID = {'HD322-45'; 'HD524-75'; 'SZ62'}`. You can create this file Matlab using the following commands:
+```
+ID = {'HD322-45'; 'HD524-75'; 'SZ62'};
+save('ID.mat', 'ID')
+```
 
 (c) Sam files with reads overlaping the region `chr:posW(1)-posW(2)`. Sam files must be named with integer numbers, for example, `1.sam`, `2.sam`, `3.sam`, etc. and correspond to the names of individuals in the variable `ID`. For example, `HD322-45 <---> 1.sam`, `HD524-75 <---> 2.sam`, `SZ62 <---> 3.sam`, etc.
 If you have initially bam files, you can use `samtools` to extract reads from the bam files:
@@ -33,6 +41,18 @@ If you have initially bam files, you can use `samtools` to extract reads from th
 samtools view BAMs/HD322-45.bam 5:145838397-145838950 > SAMs/1.sam
 ```
 **NOTE:** sam files should contain specific region. If sam files contain all reads or reads for the whole chromosome, the script might not work.
+
+
+Here is final structure of your folder `.`:
+```
+.
+├── SAMs
+       ├── Pos.mat
+       ├── ID.mat
+       ├── 1.sam
+       ├── 2.sam
+       ├── 3.sam
+```
 
 
 Please cite the following publication if you use this code:
